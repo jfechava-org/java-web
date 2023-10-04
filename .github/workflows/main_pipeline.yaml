@@ -1,0 +1,7 @@
+## Comment for testing workflow
+name: main_pipeline
+on:
+  push:
+    branches:
+      - main
+      - 'feature/**'

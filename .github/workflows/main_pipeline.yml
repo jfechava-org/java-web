@@ -101,4 +101,4 @@ jobs:
           # # Disables setting up docker-container driver
           # overrideDriver: # optional, default is false
           # # Flag for disabling the login & push steps, set to true by default
-          pushImage: # optional, default is true
+          pushImage: false # optional, default is true

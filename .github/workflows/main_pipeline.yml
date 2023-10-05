@@ -52,53 +52,13 @@ jobs:
           cleanup_credentials: true
 
 
-      #- name: Build and Push Docker image
-      #  uses: docker/build-push-action@v5.0.0
-      #  with:
-      #    context: .
-      #    file: Dockerfile
-      #    platforms: linux/amd64
-      #    tags: latest
-      #    push: true
-
-      - name: Docker Build & Push Action
-        uses: mr-smithers-excellent/docker-build-push@v6.2
+      - name: Build and Push Docker image
+        uses: docker/build-push-action@v5.0.0
         with:
-        # Name of the Docker image
-          image: java-microservice
-         # Tags override for Docker image
-          tags: latest# optional
-           # Target Docker registry
-          #registry: 
-           # Location of Dockerfile, if not Dockerfile in root directory
-          dockerfile: Dockerfile
-          # Directory to run `docker build` from, if not project root
-          #directory: # optional
-          # Docker build arguments passed via --build-arg
-          #buildArgs: # optional
-          # Docker build labels passed via --label
-          #labels: # optional
-          # Docker build target passed via --target
-          # target: # optional
-          # # Docker build platform passed via --platform
-          # platform: # optional
-          # # Docker build ssh options passed via --ssh
-          # ssh: # optional
-          # # Docker registry username
-          # username: # optional
-          # # Docker registry password
-          # password: # optional
-          # # GitHub organization to push image to (if not current)
-          # gitHubOrg: # optional
-          # # Adds latest tag to auto-generated GitOps tag
-          # addLatest: # optional, default is false
-          # # Suffixes a build timestamp to the branch-based Docker tag
-          # addTimestamp: # optional, default is false
-          # # Enables Docker BuildKit support
-          # enableBuildKit: # optional, default is false
-          # # Builds image with buildx to support multiple platforms
-          # multiPlatform: # optional, default is false
-          # # Disables setting up docker-container driver
-          # overrideDriver: # optional, default is false
-          # # Flag for disabling the login & push steps, set to true by default
-          pushImage: false # optional, default is true
+          context: .
+          file: Dockerfile
+          platforms: linux/amd64
+          tags: latest
+          push: true
+
+          

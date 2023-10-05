@@ -41,6 +41,15 @@ jobs:
       - name: Test with Maven
         run: mvn test
 
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v1.1.1
+        with:
+          #project_id: # optional
+          #workload_identity_provider: # optional
+          #service_account: service-account-jfe@john-tests.iam.gserviceaccount.com # optional
+          #audience: # optional
+          credentials_json: '${{ secrets.JFE_SECRET }}' # optional
+
       - name: Build and Push Docker image
         uses: docker/build-push-action@v5.0.0
         with:

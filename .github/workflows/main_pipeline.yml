@@ -68,5 +68,5 @@ jobs:
           GOOGLE_PROJECT_N : ${{ secrets.GOOGLE_PROJECT }}
         run: |
           gcloud auth configure-docker europe-southwest1-docker.pkg.dev
-          docker build -t europe-southwest1-docker.pkg.dev/$GOOGLE_PROJECT_N/java-microservice:latest .
-          docker push europe-southwest1-docker.pkg.dev/$GOOGLE_PROJECT_N/java-microservice:latest
+          docker build -t europe-southwest1-docker.pkg.dev/$GOOGLE_PROJECT_N/java-microservice/java-image:latest .
+          docker push europe-southwest1-docker.pkg.dev/$GOOGLE_PROJECT_N/java-microservice/java-image:latest

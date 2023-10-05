@@ -49,12 +49,14 @@ jobs:
           #service_account: service-account-jfe@john-tests.iam.gserviceaccount.com # optional
           #audience: # optional
           credentials_json: '${{ secrets.JFE_SECRET }}' # optional
+          cleanup_credentials: true
+
 
       - name: Build and Push Docker image
-        uses: docker/build-push-action@v5.0.0
+        uses: docker/build-push-action@v6.2
         with:
           context: .
           file: Dockerfile
           platforms: linux/amd64
           tags: latest
-          push: false 
+          push: true

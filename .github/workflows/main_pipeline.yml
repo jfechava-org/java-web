@@ -65,8 +65,8 @@ jobs:
 
       - name: Build and push Docker Image
         env:
-          GOOGLE_PROJECT: ${{ secrets.GOOGLE_PROJECT }}
+          GOOGLE_PROJECT_N : ${{ secrets.GOOGLE_PROJECT }}
         run: |
           gcloud auth configure-docker europe-southwest1-docker.pkg.dev
-          docker build -t europe-southwest1-docker.pkg.dev/$GOOGLE_PROJECT/java-microservice:latest .
-          docker push europe-southwest1-docker.pkg.dev/$GOOGLE_PROJECT/java-microservice:latest
+          docker build -t europe-southwest1-docker.pkg.dev/$GOOGLE_PROJECT_N/java-microservice:latest .
+          docker push europe-southwest1-docker.pkg.dev/$GOOGLE_PROJECT_N/java-microservice:latest

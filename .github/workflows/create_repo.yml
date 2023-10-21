@@ -6,7 +6,7 @@ on:
       - main
       - 'feature/**'
 env: 
-  REPO_NAME: umami-app01-tier-04
+  REPO_NAME: umami-app01-tier-05
   RUNNER_PATH: /home/runner/work/java-web/java-web/
 
 jobs:
@@ -40,7 +40,8 @@ jobs:
           echo ${{ env.REPO_NAME }}
           cd ${{ env.REPO_NAME }}
           git init
-          git checkout master
+          git checkout -b master
+          git push origin master
           touch readme.md
           git add .
           git commit -m "Added new files to the new repo"

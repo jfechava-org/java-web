@@ -6,7 +6,7 @@ on:
       - main
       - 'feature/**'
 env: 
-  REPO_NAME: umami-app01-tier-08
+  REPO_NAME: umami-app01-tier-09
   RUNNER_PATH: /home/runner/work/java-web/java-web/
 
 jobs:
@@ -41,6 +41,7 @@ jobs:
           echo ${{ env.REPO_NAME }}
           cd ${{ env.REPO_NAME }}
           git remote -v
+          git remote add upstream https://${{ secrets.TOKEN }}@github.com/jfechava-org/${{ env.REPO_NAME }}.git
           git checkout -b master
           git push -u origin master
           git init

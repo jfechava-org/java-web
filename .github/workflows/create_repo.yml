@@ -19,6 +19,6 @@ jobs:
           echo "The runner path is:$RUNNER_PATH"
           mkdir ./$REPO_NAME
           cd $REPO_NAME
-          ls -ltra
+          touch readme.md
      
 

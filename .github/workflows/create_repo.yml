@@ -19,6 +19,7 @@ jobs:
           echo "The runner path is:$RUNNER_PATH"
           mkdir ./$REPO_NAME
           cd $REPO_NAME
+          git init
           touch readme.md
           ls
           pwd

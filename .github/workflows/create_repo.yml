@@ -35,8 +35,9 @@ jobs:
           -H "X-GitHub-Api-Version: 2022-11-28" \
           https://api.github.com/orgs/jfechava-org/repos \
           -d '{"name":"${{ env.REPO_NAME }}","description":"New Repo from API","homepage":"https://github.com","private":false,"has_issues":true,"has_projects":true,"has_wiki":true}'
-          #git clone -b master https://AzureRepo-PAT:$(AzureRepo--Token)@dev.azure.com/jfechav0881/john-project/_git/$(projectName)
 
           git clone https://${{ secrets.TOKEN }}@github.com/jfechava-org/${{ env.REPO_NAME }}.git
+          echo ${{ env.REPO_NAME }}
+          cd ${{ env.REPO_NAME }}
               
   

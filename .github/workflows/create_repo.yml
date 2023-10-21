@@ -23,6 +23,7 @@ jobs:
           git config --global user.email "you@example.com"
           git config --global user.name "Your Name"
           touch readme.md
+          git add .
           git commit -m "New repo"
      
 

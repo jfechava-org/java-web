@@ -20,6 +20,7 @@ jobs:
           mkdir ./$REPO_NAME
           cd $REPO_NAME
           git init
+          git config Omit --global
           touch readme.md
           git commit -m "New repo"
      

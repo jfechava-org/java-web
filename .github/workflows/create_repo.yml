@@ -20,6 +20,7 @@ jobs:
           mkdir ./$REPO_NAME
           cd $REPO_NAME
           touch readme.md
-          ls -ltr
+          ls
+          pwd
      
 

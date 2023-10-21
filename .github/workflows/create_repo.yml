@@ -1,1 +1,21 @@
+## Comment for testing new
+name: create_repo
+on:
+  push:
+    branches:
+      - main
+      - 'feature/**'
+
+jobs:
+  build:
+    runs-on: 'ubuntu-20.04'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: create repo
+        run: |
+          echo 'cmd 01'
+          sleep 05
+          echo 'cmd 02'
 

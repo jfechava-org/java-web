@@ -8,7 +8,7 @@ on:
 env: 
   REPO_NAME: umami-app01-tier
   RUNNER_PATH: /home/runner/work/java-web/java-web/
-  token: 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
+  token: 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
 
 
 jobs:

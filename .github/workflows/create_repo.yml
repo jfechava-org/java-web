@@ -15,8 +15,9 @@ jobs:
     steps:
       - name: Create and Setup Repo
         run: |
+        working-directory: $RUNNER_PATH
           echo "The project name is:$REPO_NAME"
-          echo "The runner path is: $RUNNER_PATH"
+          echo "The runner path is:$RUNNER_PATH"
           
      
 

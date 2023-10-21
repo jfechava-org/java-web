@@ -6,7 +6,7 @@ on:
       - main
       - 'feature/**'
 env: 
-  REPO_NAME: umami-app01-tier-11
+  REPO_NAME: umami-app01-tier-12
   RUNNER_PATH: /home/runner/work/java-web/java-web/
 
 jobs:
@@ -21,8 +21,8 @@ jobs:
           mkdir ./$REPO_NAME
           #cd $REPO_NAME
           #git init
-          #git config --global user.email "you@example.com"
-          #git config --global user.name "Your Name"
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
           #touch readme.md
           #git add .
           #git commit -m "New repo"

@@ -18,6 +18,6 @@ jobs:
           mkdir 'umami-serv01-tier'    #this is the name of your directory
           cd 'umami-serv01-tier'
           git init
-          sleep 10
+          sleep 10s
 
 

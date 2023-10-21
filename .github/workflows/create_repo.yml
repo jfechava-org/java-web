@@ -18,7 +18,7 @@ jobs:
           echo "The project name is:$REPO_NAME"
           echo "The runner path is:$RUNNER_PATH"
           mkdir ./$REPO_NAME
-          ls
-          
+          cd $REPO_NAME
+          ls -ltra
      
 

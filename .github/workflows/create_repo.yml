@@ -18,6 +18,7 @@ jobs:
       - name: create repo
         run: |
           echo $REPO_NAME
+          working-directory: $REPO_NAME
           sleep 15s
           mkdir $REPO_NAME    #this is the name of your directory
           cd $REPO_NAME

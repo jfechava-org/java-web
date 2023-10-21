@@ -14,11 +14,11 @@ jobs:
     runs-on: 'ubuntu-20.04'
     steps:
       - name: Create and Setup Repo
-        working-directory: ./$REPO_NAME
         run: |
           echo $REPO_NAME
           sleep 5s
           cd $RUNNER_PATH
+          sleep 10s
           mkdir $REPO_NAME    #this is the name of your directory
           cd $REPO_NAME
           git init

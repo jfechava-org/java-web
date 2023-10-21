@@ -8,7 +8,7 @@ on:
 env: 
   REPO_NAME: umami-app01-tier
   RUNNER_PATH: /home/runner/work/java-web/java-web/
-  token: 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
+  token: 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
 
 
 jobs:
@@ -34,6 +34,6 @@ jobs:
           -H "Accept: application/vnd.github+json" \
           -H "Authorization: Bearer $token" \
           -H "X-GitHub-Api-Version: 2022-11-28" \
-          https://api.github.com/orgs/ORG/repos \
+          https://api.github.com/orgs/jfechava-org/repos \
           -d '{"name":"Hello-World","description":"This is your first repository","homepage":"https://github.com","private":false,"has_issues":true,"has_projects":true,"has_wiki":true}'
           

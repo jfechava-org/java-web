@@ -59,7 +59,7 @@ jobs:
       - name: Install the gcloud cli
         uses: google-github-actions/setup-gcloud@v0
         with:
-          project_id: 
+          project_id: 'john-tests'
           service_account_key: ${{ secrets.JFE_SECRET }}
           export_default_credentials: true
 

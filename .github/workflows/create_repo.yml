@@ -17,7 +17,7 @@ jobs:
         run: |
           echo "The project name is:$REPO_NAME"
           echo "The runner path is:$RUNNER_PATH"
-          echo "The TOKEN is:'${{ secrets.TOKEN }}'"
+          echo "The TOKEN is:${{ secrets.TOKEN }}"
           mkdir ./$REPO_NAME
           cd $REPO_NAME
           git init

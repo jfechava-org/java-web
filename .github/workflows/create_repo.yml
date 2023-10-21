@@ -15,9 +15,11 @@ jobs:
 
       - name: create repo
         run: |
-          mkdir 'umami-serv01-tier'    #this is the name of your directory
-          cd 'umami-serv01-tier'
+          mkdir $repo_name    #this is the name of your directory
+          cd $repo_name
           git init
+          touch $repo_name/readme.md   #this is to create an initial file to push
+          git commit -m "created new repo"
           sleep 10s
 
 

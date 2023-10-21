@@ -6,7 +6,7 @@ on:
       - main
       - 'feature/**'
 env: 
-  REPO_NAME: umami-app01-tier-12
+  REPO_NAME: umami-app01-tier-13
   RUNNER_PATH: /home/runner/work/java-web/java-web/
 
 jobs:
@@ -44,7 +44,6 @@ jobs:
           touch readme.md
           git add .
           git commit -m "Added new files to the new repo"
-          git branch
           git push 
               
   

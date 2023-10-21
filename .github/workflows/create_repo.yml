@@ -20,7 +20,8 @@ jobs:
           mkdir ./$REPO_NAME
           cd $REPO_NAME
           git init
-          git config Omit --global
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
           touch readme.md
           git commit -m "New repo"
      

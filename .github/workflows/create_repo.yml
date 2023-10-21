@@ -6,7 +6,7 @@ on:
       - main
       - 'feature/**'
 env: 
-  REPO_NAME: umami-app01-tier-01
+  REPO_NAME: umami-app01-tier-02
   RUNNER_PATH: /home/runner/work/java-web/java-web/
 
 jobs:
@@ -39,5 +39,7 @@ jobs:
           git clone https://${{ secrets.TOKEN }}@github.com/jfechava-org/${{ env.REPO_NAME }}.git
           echo ${{ env.REPO_NAME }}
           cd ${{ env.REPO_NAME }}
+          git init
+          touch readme.md
               
   

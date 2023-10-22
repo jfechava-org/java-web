@@ -18,13 +18,7 @@ jobs:
           # Run script for creating a repo
           ../create_repo.sh
 
-          git clone https://${{ secrets.TOKEN }}@github.com/jfechava-org/${{ env.REPO_NAME }}.git
-          echo ${{ env.REPO_NAME }}
-          cd ${{ env.REPO_NAME }}
-          git init
-          touch readme.md
-          git add .
-          git commit -m "Added new files to the new repo"
-          git push 
-              
+          # Run script for cloning a repo
+          ../clone_repo.sh
+
   

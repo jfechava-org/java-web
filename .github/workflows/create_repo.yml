@@ -17,10 +17,11 @@ jobs:
         uses: actions/checkout@v4
         
       - name: Create and Setup Repo
-        #working-directory: ${{ github.workspace }}/scripts
+        env: 
+          REPO_NAME: umami-app01-tier-13
+        working-directory: ${{ github.workspace }}/scripts
         shell: bash
         run: |
-          cd ${{ github.workspace }}/scripts
           # Change run modes to the scripts
           chmod +x ./create_repo.sh
           chmod +x ./clone_repo.sh

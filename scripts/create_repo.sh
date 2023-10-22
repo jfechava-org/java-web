@@ -26,4 +26,4 @@ curl -L \
 -H "Authorization: Bearer $TOKEN" \
 -H "X-GitHub-Api-Version: 2022-11-28" \
 https://api.github.com/orgs/jfechava-org/repos \
--d '{"name":"$TOKEN","description":"New Repo from API","homepage":"https://github.com","private":false,"has_issues":true,"has_projects":true,"has_wiki":true}'
+-d '{"name":"$REPO_NAME","description":"New Repo from API","homepage":"https://github.com","private":false,"has_issues":true,"has_projects":true,"has_wiki":true}'

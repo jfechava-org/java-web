@@ -14,11 +14,12 @@ jobs:
     runs-on: 'ubuntu-20.04'
     steps:
       - name: Create and Setup Repo
+        shell: bash
         run: |
           # Run script for creating a repo
-          /scripts/create_repo.sh
+          ./create_repo.sh
 
           # Run script for cloning a repo
-          /scripts/clone_repo.sh
+          ./clone_repo.sh
 
   

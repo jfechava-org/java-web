@@ -1,4 +1,4 @@
-
+#!/bin/bash
 ##############################################################
 # @Author:  John Echavarria - GFT                            #
 # @Version: 1.0                                              #
@@ -6,11 +6,11 @@
 # @Fecha: 23 October, 2023.                                  #
 ##############################################################
 #Load variables
-REPO_NAME = $1
-TOKEN = $2
+REPO_NAME="$1"
+TOKEN="$2"
 
 # Create a folder
-mkdir ./${{ REPO_NAME }}
+mkdir ./$REPO_NAME
 
 # Initial configuration for git
 git config --global user.email "support@metro-ito.com"
@@ -23,4 +23,4 @@ curl -L \
 -H "Authorization: Bearer ${{ TOKEN }}" \
 -H "X-GitHub-Api-Version: 2022-11-28" \
 https://api.github.com/orgs/jfechava-org/repos \
--d '{"name":"${{ env.REPO_NAME }}","description":"New Repo from API","homepage":"https://github.com","private":false,"has_issues":true,"has_projects":true,"has_wiki":true}'
+-d '{"name":"${{ REPO_NAME }}","description":"New Repo from API","homepage":"https://github.com","private":false,"has_issues":true,"has_projects":true,"has_wiki":true}'

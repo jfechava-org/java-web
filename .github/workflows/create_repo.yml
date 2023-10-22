@@ -14,12 +14,12 @@ jobs:
     runs-on: 'ubuntu-20.04'
     steps:
       - name: Create and Setup Repo
+        working-directory: ${{ github.workspace }}/scripts
         shell: bash
         run: |
           # Run script for creating a repo
-          "${GITHUB_WORKSPACE}/scripts/create_repo.sh"
+          ./create_repo.sh
 
           # Run script for cloning a repo
-          "${GITHUB_WORKSPACE}/scripts/clone_repo.sh"
+          ./clone_repo.sh
 
-  

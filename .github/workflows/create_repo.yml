@@ -17,9 +17,9 @@ jobs:
         shell: bash
         run: |
           # Run script for creating a repo
-          ./create_repo.sh
+          "${GITHUB_WORKSPACE}/scripts/create_repo.sh"
 
           # Run script for cloning a repo
-          ./clone_repo.sh
+          "${GITHUB_WORKSPACE}/scripts/clone_repo.sh"
 
   

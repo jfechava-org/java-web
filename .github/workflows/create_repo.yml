@@ -16,9 +16,9 @@ jobs:
       - name: Create and Setup Repo
         run: |
           # Run script for creating a repo
-          ./scripts/create_repo.sh
+          /scripts/create_repo.sh
 
           # Run script for cloning a repo
-          ./scripts/clone_repo.sh
+          /scripts/clone_repo.sh
 
   

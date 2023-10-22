@@ -15,20 +15,11 @@ jobs:
     steps:
       - name: Create and Setup Repo
         run: |
-          #echo "The project name is:$REPO_NAME"
-          #echo "The runner path is:$RUNNER_PATH"
-          #echo "The TOKEN is:${{ secrets.TOKEN }}"
-          mkdir ./$REPO_NAME
-          #cd $REPO_NAME
-          #git init
-          git config --global user.email "you@example.com"
-          git config --global user.name "Your Name"
-          #touch readme.md
-          #git add .
-          #git commit -m "New repo"
-          ##https://github.com/jfechava-org/java-web.git
-          #git remote add origin git@github.com:jfechava/$REPO_NAME.git
-          
+          mkdir ./${{ env.REPO_NAME }}
+   
+          git config --global user.email "support@metro-ito.com"
+          git config --global user.name "support"
+   
           curl -L \
           -X POST \
           -H "Accept: application/vnd.github+json" \

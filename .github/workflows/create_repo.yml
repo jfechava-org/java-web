@@ -14,12 +14,16 @@ jobs:
     runs-on: 'ubuntu-20.04'
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         
       - name: Create and Setup Repo
         working-directory: ${{ github.workspace }}/scripts
         shell: bash
         run: |
+          # Change run modes to the scripts
+          chmod 664 ./create_repo.sh
+          chmod 664 ./clone_repo.sh
+          
           # Run script for creating a repo
           ./create_repo.sh
 

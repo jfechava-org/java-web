@@ -22,7 +22,8 @@ jobs:
           # Change run modes to the scripts
           chmod +x ./create_repo.sh 
           chmod +x ./clone_repo.sh 
-          
+          echo ${{ env.REPO_NAME }}
+          echo ${{ secrets.TOKEN }}
           # Run script for creating a repo
           ./create_repo.sh ${{ env.REPO_NAME }} ${{ secrets.TOKEN }}
           # Run script for cloning a repo

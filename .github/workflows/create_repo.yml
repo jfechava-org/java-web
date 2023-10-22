@@ -17,6 +17,8 @@ jobs:
         working-directory: ${{ github.workspace }}/scripts
         shell: bash
         run: |
+          pwd
+          ls
           # Run script for creating a repo
           ./create_repo.sh
 

@@ -21,8 +21,8 @@ jobs:
         shell: bash
         run: |
           # Change run modes to the scripts
-          chmod 664 ./create_repo.sh
-          chmod 664 ./clone_repo.sh
+          chmod +x ./create_repo.sh
+          chmod +x ./clone_repo.sh
           
           # Run script for creating a repo
           ./create_repo.sh

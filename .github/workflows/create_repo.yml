@@ -7,7 +7,6 @@ on:
       - 'feature/**'
 env: 
   REPO_NAME: umami-app01-tier-13
-  RUNNER_PATH: /home/runner/work/java-web/java-web/
 
 jobs:
   build:
@@ -21,12 +20,11 @@ jobs:
         shell: bash
         run: |
           # Change run modes to the scripts
-          chmod +x ./create_repo.sh
-          chmod +x ./clone_repo.sh
+          chmod +x ./create_repo.sh 
+          chmod +x ./clone_repo.sh 
           
           # Run script for creating a repo
-          ./create_repo.sh
-
+          ./create_repo.sh ${{ env.REPO_NAME }} ${{ secrets.TOKEN }}
           # Run script for cloning a repo
-          ./clone_repo.sh
+          ./clone_repo.sh ${{ env.REPO_NAME }} ${{ secrets.TOKEN }}
 

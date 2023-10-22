@@ -15,13 +15,11 @@ jobs:
     steps:
       - name: Create and Setup Repo
         working-directory: ${{ github.workspace }}/scripts
-        shell: bash
         run: |
-          pwd
-          ls
+  
           # Run script for creating a repo
-          ./create_repo.sh
+          bash ./create_repo.sh
 
           # Run script for cloning a repo
-          ./clone_repo.sh
+          bash ./clone_repo.sh
 

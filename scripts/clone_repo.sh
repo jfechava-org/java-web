@@ -5,7 +5,7 @@
 # @Descripcion: Clone a repo and add files.                  #
 # @Fecha: 23 October, 2023.                                  #
 ##############################################################
-#Load variables
+#Load variables test
 REPO_NAME="$1"
 TOKEN="$2" 
 # git clone https://${{ secrets.TOKEN }}@github.com/jfechava-org/${{ env.REPO_NAME }}.git

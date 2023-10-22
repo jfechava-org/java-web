@@ -17,8 +17,6 @@ jobs:
         uses: actions/checkout@v4
         
       - name: Create and Setup Repo
-        env: 
-          REPO_NAME: umami-app01-tier-13
         working-directory: ${{ github.workspace }}/scripts
         shell: bash
         run: |

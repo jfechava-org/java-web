@@ -15,11 +15,14 @@ jobs:
       - name: Create and Setup Repo
         shell: bash
         run: |
+          # Create a folder for Github repo
           mkdir ./${{ env.REPO_NAME }}
-   
+
+          # Initial configuration for git
           git config --global user.email "support@metro-ito.com"
           git config --global user.name "support"
-   
+
+          # Create a repo using the Github API
           curl -L \
           -X POST \
           -H "Accept: application/vnd.github+json" \
@@ -28,11 +31,13 @@ jobs:
           https://api.github.com/orgs/jfechava-org/repos \
           -d '{"name":"${{ env.REPO_NAME }}","description":"New Repo from API","homepage":"https://github.com","private":false,"has_issues":true,"has_projects":true,"has_wiki":true}'
           
-          
+          # Clone the previous empty repo
           git clone https://${{ secrets.TOKEN }}@github.com/jfechava-org/${{ env.REPO_NAME }}.git
           echo ${{ env.REPO_NAME }}
           cd ${{ env.REPO_NAME }}
           git init
+
+          # Add the templates files to the repo
           touch readme.md
           git add .
           git commit -m "Added new files to the new repo"

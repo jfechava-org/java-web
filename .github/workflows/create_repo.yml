@@ -6,7 +6,7 @@ on:
       - main
       - 'feature/**'
 env: 
-  REPO_NAME: umami-app01-tier-01
+  REPO_NAME: umami-app01-tier-02
 
 jobs:
   build:
@@ -15,40 +15,33 @@ jobs:
       - name: Create and Setup Repo
         shell: bash
         run: |
-
-          curl -L \
-          -X DELETE \
-          -H "Accept: application/vnd.github+json" \
-          -H "Authorization: Bearer ${{ secrets.TOKEN }}" \
-          -H "X-GitHub-Api-Version: 2022-11-28" \
-          https://api.github.com/repos/jfechava/${{ env.REPO_NAME }}
           
-          # # Create a folder for Github repo
-          # mkdir ./${{ env.REPO_NAME }}
+           # Create a folder for Github repo
+           mkdir ./${{ env.REPO_NAME }}
 
-          # # Initial configuration for git
-          # git config --global user.email "support@metro-ito.com"
-          # git config --global user.name "support"
+           # Initial configuration for git
+           git config --global user.email "support@metro-ito.com"
+           git config --global user.name "support"
 
-          # # Create a repo using the Github API
-          # curl -L \
-          # -X POST \
-          # -H "Accept: application/vnd.github+json" \
-          # -H "Authorization: Bearer ${{ secrets.TOKEN }}" \
-          # -H "X-GitHub-Api-Version: 2022-11-28" \
-          # https://api.github.com/orgs/jfechava-org/repos \
-          # -d '{"name":"${{ env.REPO_NAME }}","description":"New Repo from API","homepage":"https://github.com","private":false,"has_issues":true,"has_projects":true,"has_wiki":true}'
+           # Create a repo using the Github API
+           curl -L \
+           -X POST \
+           -H "Accept: application/vnd.github+json" \
+           -H "Authorization: Bearer ${{ secrets.TOKEN }}" \
+           -H "X-GitHub-Api-Version: 2022-11-28" \
+           https://api.github.com/orgs/jfechava-org/repos \
+           -d '{"name":"${{ env.REPO_NAME }}","description":"New Repo from API","homepage":"https://github.com","private":false,"has_issues":true,"has_projects":true,"has_wiki":true}'
           
-          # # Clone the previous empty repo
-          # git clone https://${{ secrets.TOKEN }}@github.com/jfechava-org/${{ env.REPO_NAME }}.git
-          # echo ${{ env.REPO_NAME }}
-          # cd ${{ env.REPO_NAME }}
-          # git init
+           # Clone the previous empty repo
+           git clone https://${{ secrets.TOKEN }}@github.com/jfechava-org/${{ env.REPO_NAME }}.git
+           echo ${{ env.REPO_NAME }}
+           cd ${{ env.REPO_NAME }}
+           git init
 
-          # # Add the templates files to the repo
-          # touch readme.md
-          # git add .
-          # git commit -m "Added new files to the new repo"
-          # git push 
+           # Add the templates files to the repo
+           touch readme.md
+           git add .
+           git commit -m "Added new files to the new repo"
+           git push 
               
 
